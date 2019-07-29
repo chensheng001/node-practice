@@ -3,7 +3,7 @@ var fs = require('fs');
     console.log(err)
 });*/
 
-/*fs.writeFile('css/text.txt','sss',function (err) {
+/*fs.writeFile('js/text.js','sss222',function (err) {
     console.log(err)
 })*/
 
@@ -36,5 +36,30 @@ var fs = require('fs');
     console.log(err)
 })*/
 
+
+//遍历所有04fs模块中的目录
+/*var dirArr=[];
+fs.readdir('./',function (err,files) {
+
+    //立即自执行函数
+    (function readFile(i) {
+
+        if (i === files.length) {
+            console.log(dirArr)
+        }else {
+            fs.stat('./'+files[i],function (err,stats) {
+                if (err) {
+                    console.log(err);
+                    return false
+                }
+                if (stats.isDirectory()) {
+                    dirArr.push(files[i])
+                }
+
+                readFile(i+1)
+            })
+        }
+    })(0)
+})*/
 
 
