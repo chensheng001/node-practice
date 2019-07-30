@@ -1,5 +1,5 @@
 var fs = require('fs');
-/*fs.mkdir('js',function (err) {
+/*fs.mkdir('imgs',function (err) {
     console.log(err)
 });*/
 
