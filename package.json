@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "ejs": "^2.6.2",
     "md5-node": "^1.0.1"
   },
   "devDependencies": {},
