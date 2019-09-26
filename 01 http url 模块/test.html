@@ -152,12 +152,35 @@
         function add(...args) {
           console.log(args)
         }
-        add(1,2,3)
+        //add(1,2,3)
+
+        //------------------------reduce方法使用
+        const arr1 = [{aa: 'hahaha'}, {bb: 'hehehe'}, {cc: 'heiheihei'}];
+        const newObj = arr1.reduce((previousValue, currentValue) => {
+          return Object.assign(previousValue, currentValue);
+        }, {dd: 'initValue'});
 
 
     </script>
+    <style>
+        .content{
+            padding: 40px;
+        }
+        .triangle{
+            display: block;
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color: red transparent transparent red;
+        }
+    </style>
 </head>
 <body>
+    <div class="content">
+        <span class="triangle">
 
+        </span>
+    </div>
 </body>
 </html>
