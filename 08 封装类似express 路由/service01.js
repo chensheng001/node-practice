@@ -16,7 +16,6 @@ app.get('register',function(req,res){
 })
 
 app.post('dologin',function(req,res){
-
     console.log(req.body)
     res.end('dologin');
 })

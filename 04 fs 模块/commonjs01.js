@@ -10,7 +10,7 @@ var fs = require('fs');
 /*fs.stat('html' ,function (err,stat) {
     console.log(stat.isFile())
     console.log(stat.isDirectory())
-})*/
+});*/
 
 /*fs.appendFile('html/index.html','222\n',function (err) {
     console.log(err)
@@ -20,7 +20,7 @@ var fs = require('fs');
     console.log(data.toString())
 })*/
 
-/*fs.rename('html/index.html','html/news.html',function (err) {
+/*fs.rename('html/news.html','html/index.html',function (err) {
     console.log(err)
 })*/
 
@@ -28,8 +28,8 @@ var fs = require('fs');
     console.log(data)
 })*/
 
-/*fs.unlink('css/text.txt',function (err) {
-    console.log(err)
+/*fs.unlink('css/test.txt',function (err) {
+    console.log(err);
 })*/
 
 /*fs.rmdir('css',function (err) {
