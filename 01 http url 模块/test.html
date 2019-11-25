@@ -18,7 +18,7 @@
         Person.prototype.name = 'heihei';
         Person.prototype.work = function () {
           console.log(this.name + '在work')
-        }
+        };
 
         let person = new Person('haha', 20);
 
@@ -145,6 +145,12 @@
         const pro = Promise.resolve('aaa');
 
         //-----------------------------变量解构
+        const obj = {
+          name: 'hahah',
+          sex: 'man'
+        };
+        const {name,sex} = obj;
+
         function f(x,y) {
           console.log(x,y)
         }
@@ -154,11 +160,49 @@
         }
         //add(1,2,3)
 
+        //----------------------------------扩展运算符
+        //数组合并
+        var arr11=[10,20,30];
+        var arr2=[40,50,60];
+        var newArr=[...arr11,...arr2];
+
+        //展开数组
+        console.log(Math.max(...arr11));
+
+        //对象合并
+        var obj1={width:100,height:100};
+        var obj2={left:100,top:100};
+        var newObj2={...obj1,...obj2};
+        // let res = Object.assign(obj1, obj2)
+
         //------------------------reduce方法使用
         const arr1 = [{aa: 'hahaha'}, {bb: 'hehehe'}, {cc: 'heiheihei'}];
         const newObj = arr1.reduce((previousValue, currentValue) => {
           return Object.assign(previousValue, currentValue);
         }, {dd: 'initValue'});
+
+        //-----------------------------使用set求交集，并集，差集
+        const arra = [1,2,3];
+        const arrb = [2,3,4];
+        const seta = new Set(arra);
+        const setb = new Set(arrb);
+        const newarr = [...arra, ...arrb];
+        // 并集
+        const union = [...new Set(newarr)];
+        // 交集
+        let intersect = arra.filter(x => setb.has(x));
+        // 差集
+        let difference = union.filter(x => !new Set(intersect).has(x));
+
+        //-------------------------------symbol------------------------
+        const mySymbol=Symbol();
+        //第一种写法
+        let a={};
+        a[mySymbol]="Hello!";
+        //第二种写法
+        let b={
+          [mySymbol]:"Hello!"
+        };
 
 
     </script>
