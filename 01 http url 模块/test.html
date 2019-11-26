@@ -204,6 +204,61 @@
           [mySymbol]:"Hello!"
         };
 
+        //----------------------------------------深拷贝---------------
+        function deepClone(obj) {
+            if (typeof obj !== 'object') {
+              return;
+            }
+            let newObj = Array.isArray(obj) ? [] : {};
+            for(let key in obj) {
+              if (obj.hasOwnProperty(key)) {
+                newObj[key] = (typeof obj[key] === 'object' && obj[key] !== null) ? deepClone(obj[key]) : obj[key];
+              }
+            }
+            return newObj;
+        }
+
+        //---------------------------------------数组乱序
+        function mixArr(arr) {
+          return arr.sort(()=>{
+            return Math.random() - 0.5;
+          })
+        }
+
+        //---------------------------------------数组去重--------------------------
+        //1.0
+        function removeDup(arr) {
+          let res = [];
+          let hashMap = {};
+          arr.forEach(item => {
+            if (!hashMap[item]) {
+              hashMap[item] = true;
+              res.push(item);
+            }
+          });
+          return res;
+        }
+        //2.0
+        function removeDup2(arr) {
+          return [...new Set(arr)];
+          //return Array.from(new Set(arr));
+        }
+
+        // ----------------------------------- ES6  flat() 拉平数组-------------
+        // [1, 2, [3, 4, 5]].flat()  => [1,2,3,4,5]
+        function flat(arr) {
+          let newArr = [];
+          arr.forEach(item => {
+            if (Array.isArray(item)) {
+              newArr = newArr.concat(flat(item));
+            }else{
+              newArr.push(item);
+            }
+          });
+          return newArr;
+        }
+        let testArr = [1,[2,[3,[4,5,6,[7,8,9]]]]];
+
 
     </script>
     <style>
