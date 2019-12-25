@@ -349,6 +349,47 @@
             border-style: solid;
             border-color: red transparent transparent red;
         }
+
+        /*圣杯布局*/
+        /*-----1.0-------*/
+        /*.box{
+            display: flex;
+        }
+        .left{
+            width: 200px;
+            background: red;
+        }
+        .middle{
+            flex: 1;
+            background: #00b33b;
+        }
+        .right{
+            width: 200px;
+            background: black;
+        }*/
+
+        .box{
+            position: relative;
+            padding: 0 200px;
+        }
+        .left{
+            width: 200px;
+            position: absolute;
+            left: 0;
+            background: black;
+        }
+        .right{
+            width: 200px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: black;
+        }
+        .middle{
+            width: 100%;
+            background: #00b33b;
+        }
+
     </style>
 </head>
 <body>
@@ -356,6 +397,18 @@
         <span class="triangle">
 
         </span>
+
+        <div class="box">
+            <div class="left">
+                left
+            </div>
+            <div class="middle">
+                <embed src="rxjs.pdf" width="800" height="600" ></embed>
+            </div>
+            <div class="right">
+                right
+            </div>
+        </div>
     </div>
 </body>
 </html>
