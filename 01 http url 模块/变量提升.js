@@ -14,3 +14,31 @@ cc();
 var cc = ()=>{
     console.log('cc');
 }
+
+if(true){
+    var i =0;
+}
+console.log(i);
+
+
+/*function bb() {
+    var j = 1;
+}
+bb();
+console.log(j);*/
+
+function cc() {
+    t=2;
+}
+cc();
+console.log(t);
+
+
+
+
+
+
+
+
+
+
