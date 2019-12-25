@@ -4,6 +4,7 @@
 //const arr = [1,1,2,2,3];
 const arr =[{a:1},{a:2},{a:2},{a:1},{a:3}];
 const obj = {}, res = [];
+
 // 1.0 循环作标记
 // arr.map(item => !obj[item]? obj[item]=true : res.push(item));
 
