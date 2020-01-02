@@ -6,7 +6,7 @@ const deepClone = obj =>{
   const res = Array.isArray(obj) ? [] : {};
   for(let key in obj){
       if (obj.hasOwnProperty(key)){
-          res[key] = typeof obj[key] !== 'object' && obj[key] !== null ? obj[key] : deepClone(obj[key])
+          res[key] = (typeof obj[key] === 'object' && obj[key] !== null ) ? deepClone(obj[key]) : obj[key];
       }
   }
   return res;
