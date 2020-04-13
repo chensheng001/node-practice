@@ -21,6 +21,8 @@
         };
 
         let person = new Person('haha', 20);
+        // __proto__ __proto__这个是用来查看原型的，这个是对象的属性，这个属性可以查看但是不能修改（隐式属性）
+        //console.log(person.__proto__)
 
 
         function Web(name,age) {
@@ -36,9 +38,8 @@
         //-----------------------------------------------------call, apply,bind 改变this指针
         var cat = {
           name: 'cat',
-          eatFish: function (it) {
-            console.log(this)
-            console.log(it + '在'+'eat fish')
+          eatFish: function (itName, itAge) {
+            console.log(itName + '在'+'eat fish', '------'+itAge)
           }
         };
         var dog = {
@@ -51,7 +52,7 @@
         //cat.eatFish.apply(dog, [dog.name]);
         //let eat = cat.eatFish.bind(dog,dog.name);
         //eat();
-        
+
         //-------call原理
         Function.prototype.call = function (thisArg,...arg) {
           if (typeof this !== 'function') {
@@ -59,14 +60,13 @@
           }
           thisArg = thisArg || window;
           thisArg.fn = this;
-          console.log(arg)
           /*let argArr = Array.from(arguments);
           const res = thisArg.fn(...argArr.slice(1));*/
-          const res = thisArg.fn(arg);
+          const res = thisArg.fn(...arg);
           delete thisArg.fn;
           return res;
         };
-        //cat.eatFish.call(dog,dog.name);
+        cat.eatFish.call(dog,dog.name,12);
 
         //-------apply原理
         Function.prototype.apply = function (thisArg, arg) {
