@@ -22,6 +22,7 @@
     };
 
     let person = new Person('haha', 20);
+    person.work();
 
 
     function Web(name, age) {
@@ -404,6 +405,8 @@
 
     </span>
 
+    <button id="test">click</button>
+
     <div class="box">
       <div class="left">
         left
@@ -422,5 +425,9 @@
     </div>
   </div>
 </body>
-
+<script>
+  document.getElementById('test').onclick = function() {
+    // 执行模块
+  }
+</script>
 </html>

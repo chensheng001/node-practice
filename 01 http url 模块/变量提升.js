@@ -27,11 +27,11 @@ console.log(i);
 bb();
 console.log(j);*/
 
-function cc() {
-    t=2;
-}
-cc();
-console.log(t);
+// function cc() {
+//     t=2;
+// }
+// cc();
+// console.log(t);
 
 
 
