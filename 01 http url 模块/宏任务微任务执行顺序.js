@@ -1,5 +1,5 @@
 
-/*let promise = new Promise((resolve, reject) => {
+let promise = new Promise((resolve, reject) => {
     console.log(`开始执行`)
 
     // 如果执行成功，则调用resolve()
@@ -21,9 +21,10 @@ promise.then(res => {
 console.log(`我会在then方法前，先执行`)
 
 // 我们可以利用timeout方法在then方法执行完成后，进行执行
-setTimeout(()=>console.log(`then方法执行完成后，开始执行`))*/
+setTimeout(()=>console.log(`then方法执行完成后，开始执行`))
 
-setTimeout(function() {
+
+/* setTimeout(function() {
     console.log('setTimeout');
 })
 
@@ -34,7 +35,7 @@ new Promise(function(resolve) {
     console.log('then');
 })
 
-console.log('console');
+console.log('console'); */
 
 
 
