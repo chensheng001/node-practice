@@ -10,7 +10,7 @@ var bb = () =>{
 }
 bb();
 
-cc();
+// cc();
 var cc = ()=>{
     console.log('cc');
 }

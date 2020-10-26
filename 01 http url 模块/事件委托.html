@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            height: 60px;
+            border: 1px solid;
+            position: absolute;
+            top: 0;
+            width: 200px;
+        }
+        #child{
+            padding-top: 30px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+        <li>555</li>
+    </ul>
+    <script type="text/javascript">
+      var parent = document.getElementById("ul");
+      var children = document.getElementsByTagName("li");
+  
+      document.body.addEventListener("click",function(e){
+        console.log("click-body");
+      });
+  
+      parent.addEventListener("click",function(e){
+        console.log('触发parent函数')
+        const tag = e.target.nodeName.toLowerCase();
+        if(tag === 'li') {
+            console.log(e.target);
+            e.target.style.backgroundColor = 'red';
+        }
+      },false);
+
+    //   如果不用事件委托，则需绑定多个click事件
+    //   for(let el of children) {
+    //     el.addEventListener('click',function(){
+    //       console.log('触发son函数')
+    //     })
+    //   }
+      
+    </script>
+</body>
+</html>
