@@ -8,7 +8,7 @@ http.createServer((req,res) => {
 
     if (req.url !== '/favicon.ico') {
         const result = url.parse(req.url, true); /*true参数表示将get传值转换成对象*/
-        //console.log(result.query)
+        console.log(result.query)
     }
 
     res.write('hello2');
