@@ -19,7 +19,7 @@ const obj = {}, res = [];
 // 2.0 利用map键值对里面的键的唯一性
 const map = new Map();
 arr.forEach(item => {
-    map.has(item.a) ? res.push(item) : map.set(item.a, 1)
+    map.has(JSON.stringify(item)) ? res.push(item) : map.set(JSON.stringify(item), 1)
 });
 console.log(map);
 console.log(res);

@@ -62,7 +62,7 @@
       console.log(arg)
       /*let argArr = Array.from(arguments);
       const res = thisArg.fn(...argArr.slice(1));*/
-      const res = thisArg.fn(arg);
+      const res = thisArg.fn(...arg);
       delete thisArg.fn;
       return res;
     };

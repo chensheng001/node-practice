@@ -3,7 +3,7 @@ function print() {
         setTimeout(() => {
             console.log(i);
             console.log(new Date())
-        })
+        }, 5000)
     }
 }
 print();

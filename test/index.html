@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .content{
+            position: relative;
+        }
+        .content img{
+            max-width: 100%;
+            display: block;
+        }
+        .link-list{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .link-list li{
+            float: left;
+            height: 100%;
+            width: 25%;
+        }
+        .link-list li a{
+            display: block;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img class="bg" src="./abc.jpg" alt="">
+        <ul class="link-list">
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+        </ul>
+    </div>
+</body>
+</html>
